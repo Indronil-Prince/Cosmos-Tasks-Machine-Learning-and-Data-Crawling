@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<body style="font-family:arial, sans-serif;">
+    <h1 style="text-align: center; background-color:blue; padding:10px; color:white">{{header}}</h1>
+
+	<br>
+	<br>
+
+	<h2 style="margin-left: 50px;">{{title1}}</h2>
+    <div style="margin-left: 50px;">{{description1}}</div>
+    <div id="chart1" class="chart"></div>
+
+	<h2 style="margin-left: 50px;">{{title2}}</h2>
+    <div style="margin-left: 50px;">{{description2}}</div>
+    <div id="chart2" class="chart"></div>
+
+	<h2 style="margin-left: 50px;">{{title3}}</h2>
+    <div style="margin-left: 50px;">{{description3}}</div>
+    <div id="chart3" class="chart"></div>
+
+	<h2 style="margin-left: 50px;">{{title4}}</h2>
+    <div style="margin-left: 50px;">{{description4}}</div>
+    <div id="chart4" class="chart"></div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs_1 = {{graphJSON_1 | safe}};
+    Plotly.plot('chart1',graphs_1,{});
+    var graphs_2 = {{graphJSON_2 | safe}};
+    Plotly.plot('chart2',graphs_2,{});
+    var graphs_3 = {{graphJSON_3 | safe}};
+    Plotly.plot('chart3',graphs_3,{});
+    var graphs_4 = {{graphJSON_4 | safe}};
+    Plotly.plot('chart4',graphs_4,{});
+</script>
+</html>
+
