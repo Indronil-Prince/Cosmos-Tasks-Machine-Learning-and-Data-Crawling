@@ -1,2 +1,2 @@
-# Indronil-Bhattacharjee
+# COSMOS
 Tasks from COSMOS
